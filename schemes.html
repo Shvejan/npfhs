@@ -91,7 +91,7 @@
         background-image: url("/css/searchicon.png");
         background-position: 10px 12px;
         background-repeat: no-repeat;
-        width: 100%;
+        width: 80%;
         font-size: 16px;
         padding: 12px 20px 12px 40px;
         border: 1px solid #ddd;
@@ -120,15 +120,14 @@
       }
     </style>
   </head>
-
-  <body>
+  <body data-gr-c-s-loaded="true">
     <nav
       class="navbar navbar-expand-sm bg-primary navbar-dark"
       style="background-color: #e3f2fd;"
     >
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="./index.html" id="1"><b> NHSP</b></a>
+        <a href="#" id="1"><b> NHSP</b></a>
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Health Schemes</a>
@@ -141,9 +140,15 @@
         <a href="#">Contact</a>
       </div>
       <div id="main">
-        <button class="openbtn" onclick="openNav()">☰</button>
+        <button
+          class="openbtn"
+          onclick="openNav()"
+          style="background-color: #006eff;"
+        >
+          ☰
+        </button>
       </div>
-      <a class="navbar-brand"  href="./index.html" >NHSP</a>
+      <a class="navbar-brand" href="#">NHSP</a>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -163,13 +168,8 @@
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li style="padding-right: 20px;">
-          <a href="create.html" style="color: azure;"
-            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
-          >
-        </li>
-        <li style="padding-right: 10px;">
-          <a href="login.html" style="color: azure;"
-            ><span class="glyphicon glyphicon-log-in"></span> Login</a
+          <a href="index.html" style="color: azure;"
+            ><span class="glyphicon glyphicon-user"></span>Logout</a
           >
         </li>
       </ul>
@@ -178,13 +178,19 @@
       <h1>
         Best schemes based on your profile
       </h1>
-      <input
-        type="text"
-        id="myInput"
-        onkeyup="myFunction()"
-        placeholder="Search for other schemes"
-        title="Type in a name"
-      />
+      <div class="row m-5">
+        <input
+          type="text"
+          id="myInput"
+          placeholder="Search for other schemes"
+        />
+        <a href="./results.html">
+          <button type="button" class="btn btn-warning btn-lg ml-2">
+            Search
+          </button>
+        </a>
+      </div>
+
       <div class="row">
         <div class="col-5 text-center m-5">
           <ul id="myUL">
@@ -223,14 +229,15 @@
               <b>Scheme 3</b>
             </li>
             <!-- <li class="list-group-item list-group-item-info">
-              <b>Scheme 4</b>
-
-            </li>
-
-            <li class="list-group-item list-group-item-dark">
-              A simple dark list group item
-            </li>
-          </ul> -->
+                      <b>Scheme 4</b>
+        
+                    </li>
+        
+                    <li class="list-group-item list-group-item-dark">
+                      A simple dark list group item
+                    </li>
+                  </ul> -->
+          </ul>
         </div>
         <div class="col">
           <div
